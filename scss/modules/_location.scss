@@ -1,0 +1,64 @@
+.priceImage {
+	@include parallaxBg ("kjprices2_30.jpg");
+}
+.locationContain{
+	padding-top: 76px;
+}
+.location {
+	padding: 0 55px 55px 55px;
+	iframe {
+		border: none;
+		width: 70%;
+		min-height: 600px;
+		float: left;
+		padding-right: 50px;
+		padding-bottom: 50px;
+		position: relative;
+		animation: fadeinfromleft 1s 1;
+		@include for-900-down {
+			width: 100%;
+			padding-right: 0;
+		}
+
+	}
+	.mapRight {
+		position: relative;
+		animation: fadeinfromright 1s 1;
+		h2 {
+			@include for-900-down {
+				font-size: 2rem !important;
+			}
+		}
+	}
+}
+
+//styles for the health history form goes here as well
+.container {
+	padding: 30px;
+}
+
+.contactIcons {
+	line-height: 50px;
+	margin-bottom: 15px;
+	a {
+		// display: block;
+		white-space: nowrap;
+		transition: all 0.5s;
+		color: $primaryColor;
+	}
+	i {
+		border-radius: 5px;
+		font-size:3rem;
+		width: 50px;
+		height: 50px;
+		background: rgba(0,0,0,0.1);
+		line-height: 50px;
+		text-align: center;
+		margin-right: 5px;
+	}
+	a:hover{
+		text-decoration: none;
+		color: blue;
+
+	}
+}

@@ -1,0 +1,40 @@
+.navLogo { 
+	max-height: 50px;
+}	
+.nav-item{
+	margin: 0 10px;
+}
+ul {
+	padding: 0;
+	min-width: 275px;
+}
+.dropdown-item {
+	font-size: 1.6rem;
+	.hoursTime {
+		float: right;
+	}
+	&:last-child {
+		a {
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}
+.navbar-nav{
+	justify-content: flex-end;
+}
+.navbar-toggler-icon {
+	width: 2em;
+	height: 2em;
+}
+.navbar-toggler {
+	border:1px solid $primaryColor !important;
+	display: inline-block;
+	padding-top: .3125rem;
+	padding-bottom: .3125rem;
+	margin-right: 1rem;
+	font-size: 1.25rem;
+	line-height: inherit;
+	white-space: nowrap;
+}

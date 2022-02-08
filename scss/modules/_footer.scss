@@ -1,0 +1,139 @@
+.footerHeader{
+	height: 100%;
+	background-color: #f2f7ff;
+	width:100%;
+	border-top: 2px solid $primaryColor;
+	border-bottom: 2px solid $primaryColor;
+	@include flexRow;
+	@include for-1200-down {
+		flex-direction: column;
+		justify-content: center;
+		align-items: space-between;
+	}
+	.reviewLinks {
+		width:55%;
+		@include flexRow;
+		align-items: center;
+		justify-content: space-around;
+		height: 146px;
+		color: white;
+		@include for-1200-down {
+			width: 100%;
+			@include flexCol;
+			height: 100%;
+			padding: 25px 0;
+		}
+		.footerIcon {
+			justify-content: space-around;
+			@include flexRow;
+			width: 100%;
+			@include for-1200-down {
+				justify-content: center;
+			}
+		}
+		h3{
+			width: 55%;
+			margin-left:25px !important; 
+			font-size: 2.6rem;
+			i {
+				margin-left: 25px;
+			}
+		}
+		a {
+			width: 100px;
+			height: 100px;
+			display: flex;
+			align-items: center; 
+			justify-content: center; 
+			transition: all 0.5s;
+			&:hover{
+				transform: scale(1.1);
+				border-radius: 20px;
+				&:first-child{
+					background: #28B446;
+				}
+				&:nth-child(2){
+					background:#DC0000;
+				}
+				&:last-child{
+					background:#3A559F;
+				}
+			}
+			img {
+				border-radius: 15px;
+				background:white;
+				padding: 5px;
+
+			}
+
+		}
+	}
+	.mapSmall {
+		width: 45%;
+		@include for-1200-down {
+			width: 100%;
+			display: block;
+			border-top: 2px solid $primaryColor;
+		}
+		iframe{
+			height: 145px;
+			width:100%;
+			border: 0;
+		}
+	}
+}
+.footerBody {
+	@include parallaxBg ("kjlocation2_30.jpg");
+	&:before {
+		min-height: 40vh;
+	}
+	.blackOverlay {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		background-color: rgba(0,0,0,0.2);
+	}
+}
+
+.mission {
+	width: 60%;
+	margin: 25px;
+	background-color: rgba(255,255,255,0.7);
+	border: 2px solid white;
+	padding: 25px;
+	@include flexRow;
+	@include for-1200-down {
+		width: 100%;
+	}
+	@include for-900-down{
+		@include flexCol;
+	}
+	.missionStatement, .philoStatement{
+		font-size: 1.4rem;
+		letter-spacing:3px;
+		font-weight: 700;
+		text-shadow: 1px 1px 1px #fff; 
+		@include for-1200-down {
+			letter-spacing:1px;
+		}
+		// padding: 0 25px 0 0;
+	}
+	.footerContact{
+		border-left: 1px solid rgba(0,0,0,0.1);
+		@include for-900-down{
+			border-left: none;
+			border-top: 1px solid rgba(0,0,0,0.1);
+			@include flexRow;
+			justify-content: space-around;
+		}
+		@include for-600-down {
+			@include flexCol;
+		}
+		margin-left: 15px;
+		padding: 15px;
+	}
+}
+
+.copyright {
+	text-align: center;
+}

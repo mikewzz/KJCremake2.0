@@ -1,0 +1,83 @@
+.heroImage {
+	@include parallaxBg ("kjwelcome2_30.jpg");
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+
+	.heroInfo {
+		width: 60%;
+		background: rgba(255,255,255,0.6);
+		padding: 25px;
+		display: block;
+		margin: 1% 1% 1% 0;
+		border: 1px solid $primaryColor;
+		@include for-1200-down {
+			width: 100%;
+			margin: 2%;
+		}
+		img {
+			width: 70%;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 10px;
+			position: relative;
+			animation: myfadeup 3s 1;
+			@include for-600-down {
+				width:100%;
+			} 
+
+		}
+		strong {
+			display: block;
+			// margin: 10px 0;
+		}
+		.introTop{
+			animation: fadein 3s 1;
+		}
+		.introBot {
+			animation: fadein 5s 1;
+		}
+	}
+}
+.insuredCompList {
+	width:100%;
+	@include flexRow;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	@include for-phone-only {
+		@include flexCol;
+	}
+	*{
+		flex: 1 0 40%;
+		box-sizing: border-box;
+		
+	}
+}
+
+figure {
+	float: left;
+	img {
+		margin-right: 25px;
+		@include for-900-down {
+			width: 50%;
+		}
+	}
+	figcaption {
+		font-size: 150%;
+		font-weight: 700;
+		margin-top:20px;
+		text-align: center;
+	}
+	@include for-900-down {
+		width: 100%;
+		text-align: center;
+	}
+}
+.des1, .des2, .des3 {
+	margin-bottom: 15px;
+	@include for-900-down {
+		margin: 0 50px 15px 50px;
+	}
+}

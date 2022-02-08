@@ -1,0 +1,83 @@
+.serviceImage {
+	@include parallaxBg ("kjservices2_30.jpg");
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.priceSmallText{
+			padding: 20px;
+		}
+		table {
+			position: relative;
+			animation: fadeinfrombot 1s 1;  
+			a {
+				color:$primaryColor;
+				transition: color 0.5s;
+				&:hover {
+					text-decoration: none;
+					color: blue;
+				}
+			}
+		}
+		p {
+			font-weight: 700;
+		}
+	}
+}
+
+th, td{
+	border: 2px solid black;
+	padding: 25px;
+	background: rgba(255,255,255,0.7);
+	text-shadow: 1px 1px 1px white;
+}
+
+.linkNext {
+	display: inline-block;
+	text-align: center;
+	margin: 15px 0 50px 0;
+	color: black;
+	font-weight: 700;
+	font-size: 2rem;
+	transition: color 0.5s;
+	&:hover {
+		text-decoration: none;
+		color: grey;
+	}
+}
+
+.navArea {
+	text-align: center;
+}
+
+.services {
+	@include flexRow;
+	@include for-900-down {
+		@include flexCol;
+	}
+	.servicePic {
+		width: 60%;
+		@include for-900-down {
+			width: 80%;
+			margin: 0 auto;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	.serviceP{
+		width: calc(40% - 30px);
+		letter-spacing: 2px;
+		padding: 15px;
+		h1 {
+			margin-bottom: 15px;
+		}
+		@include for-900-down {
+			width: 100%;
+		}
+		@include for-600-down {
+			padding: 0 10px;
+			letter-spacing: 0;
+		}
+	}
+}
